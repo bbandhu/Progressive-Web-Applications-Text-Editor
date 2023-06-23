@@ -31,5 +31,5 @@ registerRoute(
   ({request}) => request.destination === 'script' ||
                 request.destination === 'style' ||
                 request.destination === 'image',
-  assetCache
+  pageCache
 );

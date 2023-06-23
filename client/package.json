@@ -2,8 +2,10 @@
   "name": "JATE",
   "scripts": {
     "dev": "webpack-dev-server",
-    "build": "webpack --mode production",
-    "start": "webpack --watch"
+    "build": "webpack --mode development",
+    "start": "webpack --watch",
+    "nodemon": "nodemon server/server.js"
+
   },
   "author": "2U",
   "license": "UNLICENSED",

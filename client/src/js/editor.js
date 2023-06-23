@@ -26,11 +26,20 @@ export default class {
     // Fall back to localStorage if nothing is stored in indexeddb, and if neither is available, set the value to header.
     getDb().then((data) => {
       console.info('Loaded data from IndexedDB, injecting into editor');
-      this.editor.setValue(data || localData || header);
-    });
-
-    this.editor.on('change', () => {
-      localStorage.setItem('content', this.editor.getValue());
+    
+      let dataString = data;
+      if (Array.isArray(data)) {
+        if (data.length === 0) {
+          // If data is an empty array, replace it with the header
+          dataString = header;
+        } else {
+          // If data is a non-empty array, convert it to a string or process it as required
+          dataString = JSON.stringify(data);
+        }
+      }
+    
+      // Now use dataString in setValue
+      localData ? this.editor.setValue(localData) : this.editor.setValue(dataString || header);
     });
 
     // Save the content of the editor when the editor itself is loses focus

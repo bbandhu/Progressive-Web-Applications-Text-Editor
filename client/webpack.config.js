@@ -10,7 +10,7 @@ module.exports = () => {
     entry: {
       main: './src/js/index.js',
       install: './src/js/install.js',
-      cards: './src/js/editor.js'
+      editor: './src/js/editor.js'
     },
     // Output for our bundles
     output: {
