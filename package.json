@@ -6,13 +6,15 @@
   "scripts": {
     "start:dev": "",
     "server": "",
-    "build": "",
     "install": "",
     "client": "",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/server.js",
     "watch": "node --watch server.js",
-    "nodemon": "nodemon server.js"
+    "nodemon": "nodemon server.js",
+    "build": "webpack --mode production"
+   
+ 
   },
   "keywords": [],
   "author": "",
