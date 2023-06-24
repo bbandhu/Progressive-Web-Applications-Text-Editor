@@ -41,7 +41,9 @@ export default class {
       // Now use dataString in setValue
       localData ? this.editor.setValue(localData) : this.editor.setValue(dataString || header);
     });
+   
 
+   
     // Save the content of the editor when the editor itself is loses focus
     this.editor.on('blur', () => {
       console.log('The editor has lost focus');

@@ -1,6 +1,6 @@
-const butInstall = document.getElementById('buttonInstall');
-
 let deferredPrompt; // Saves the event to be used later
+
+const butInstall = document.getElementById('buttonInstall');
 
 // Add an event handler to the `beforeinstallprompt` event
 window.addEventListener('beforeinstallprompt', (event) => {
@@ -20,18 +20,23 @@ butInstall.addEventListener('click', async () => {
   butInstall.style.display = 'none';
   
   // Show the install prompt
-  deferredPrompt.prompt();
-  
-  // Wait for the user to respond to the prompt
-  const { outcome } = await deferredPrompt.userChoice;
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
 
-  // Optionally, send analytics event with outcome of install prompt.
-  console.log(`User response to the install prompt: ${outcome}`);
+    // Wait for the user to respond to the prompt
+    const { outcome } = await deferredPrompt.userChoice;
+
+    // Optionally, send analytics event with outcome of install prompt.
+    console.log(`User response to the install prompt: ${outcome}`);
+
+    // Clear the deferredPrompt so it can be garbage collected
+    deferredPrompt = null;
+  } else {
+    console.log('Install prompt not available yet.');
+  }
 });
 
 // Add an handler for the `appinstalled` event
 window.addEventListener('appinstalled', (event) => {
   console.log('App installed successfully!');
-  // Clear the deferredPrompt so it can be garbage collected
-  deferredPrompt = null;
 });

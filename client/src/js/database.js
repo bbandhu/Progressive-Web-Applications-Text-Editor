@@ -21,9 +21,10 @@ export const putDb = async (content) => {
 };
 
 // Add logic for a method that gets all the content from the database
+
 export const getDb = async () => {
   const db = await initdb();
-  return db.getAll('jate');
+  const results = await db.getAll('jate');
+  return results.map(result => result.content); // This will return an array of content strings
 };
-
 initdb();
