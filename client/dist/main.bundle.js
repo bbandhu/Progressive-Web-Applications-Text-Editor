@@ -38,7 +38,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   header: () => (/* binding */ header)\n/* harmony export */ });\nvar header = \"\\n/*\\n       _____  ____________\\n      / /   |/_  __/ ____/\\n __  / / /| | / / / __/   \\n/ /_/ / ___ |/ / / /___   \\n ____/_/  |_/_/ /_____/   \\njust another text editor\\n*/                          \\n\";\n\n\n//# sourceURL=webpack:///./src/js/header.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   header: () => (/* binding */ header)\n/* harmony export */ });\nvar header = \"\\n/*\\n       _____  ____________\\n      / /   |/_  __/ ____/\\n __  / / /| | / / / __/   \\n/ /_/ / ___ |/ / / /___   \\n ____/_/  |_/_/ /_____/   \\nBandhu's text editor\\n*/                          \\n\";\n\n\n//# sourceURL=webpack:///./src/js/header.js?");
 
 /***/ }),
 
