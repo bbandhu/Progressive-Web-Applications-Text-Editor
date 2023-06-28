@@ -27,6 +27,7 @@
     "workbox-webpack-plugin": "^6.2.4"
   },
   "dependencies": {
+    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
     "idb": "^6.1.2"
   }
 }
